@@ -7,4 +7,5 @@ target 'WhereAmI' do
 
   # Pods for WhereAmI
 pod 'GoogleMaps'
+pod 'RealmSwift'
 end
