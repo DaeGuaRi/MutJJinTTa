@@ -23,6 +23,7 @@
 		C94858951E64042F00E3D530 /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94858891E64042F00E3D530 /* UILoadingView.swift */; };
 		C9D08A831E6516000087B1CA /* LocationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D08A821E6516000087B1CA /* LocationGroup.swift */; };
 		C9D08A851E6516FC0087B1CA /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D08A841E6516FC0087B1CA /* UserLocation.swift */; };
+		C9D08A871E6543430087B1CA /* BenchMarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D08A861E6543430087B1CA /* BenchMarkGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C94858891E64042F00E3D530 /* UILoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILoadingView.swift; sourceTree = "<group>"; };
 		C9D08A821E6516000087B1CA /* LocationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationGroup.swift; sourceTree = "<group>"; };
 		C9D08A841E6516FC0087B1CA /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		C9D08A861E6543430087B1CA /* BenchMarkGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenchMarkGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C94858891E64042F00E3D530 /* UILoadingView.swift */,
 				C9D08A821E6516000087B1CA /* LocationGroup.swift */,
 				C9D08A841E6516FC0087B1CA /* UserLocation.swift */,
+				C9D08A861E6543430087B1CA /* BenchMarkGroup.swift */,
 			);
 			path = WhereAmI;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				C94858921E64042F00E3D530 /* LocationSupplier.swift in Sources */,
 				C94858941E64042F00E3D530 /* MapViewController.swift in Sources */,
 				C9D08A851E6516FC0087B1CA /* UserLocation.swift in Sources */,
+				C9D08A871E6543430087B1CA /* BenchMarkGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
