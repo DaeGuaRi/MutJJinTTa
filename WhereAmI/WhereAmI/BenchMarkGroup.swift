@@ -7,12 +7,24 @@
 //
 
 import Foundation
-class BenchMarkGroup {
-    var groupName: String
-    var benchMark: Dictionary<String, [String]>
+import RealmSwift
+
+class BenchMarkGroup: Object {
+    dynamic var groupName: String = ""
+    //var benchMarks: Dictionary<String, [String]> = Dictionary<String, [String]>() // Key 값이 기준점
     
-    init(groupName: String) {
-        self.groupName = groupName
-        benchMark
+    override static func primaryKey() -> String? {
+        return "groupName"
     }
+    
+    func insert(benchMark: String, locations: [String]) -> Bool {
+      //  benchMarks[benchMark] = locations
+        return false
+    }
+    
+    func delete(benchMark: String) -> Bool {
+       // benchMarks[benchMark] = nil
+        return false
+    }
+    
 }

@@ -8,16 +8,22 @@
 
 import UIKit
 import GoogleMaps
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let supplier: LocationSupplier = LocationSupplier()
     var window: UIWindow?
-
-
+    let realm: Realm = try! Realm()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey(ConstValues.GMSKey)
+        
+        do {
+            try FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
+        } catch {}
+        
         return true
     }
 

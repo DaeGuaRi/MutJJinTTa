@@ -7,15 +7,14 @@
 //
 
 import Foundation
-import CoreLocation
-import Realm
+import RealmSwift
 
-class UserLocation {
-    var coordinate: CLLocationCoordinate2D
-    var locationName: String
+class UserLocation: Object {
+    dynamic var latitude: Double = 0.0
+    dynamic var longitude: Double = 0.0
+    dynamic var locationName: String = ""
     
-    init(coordinate: CLLocationCoordinate2D, locationName: String) {
-        self.coordinate = coordinate
-        self.locationName = locationName
+    override static func primaryKey() -> String? {
+        return "locationName"
     }
 }

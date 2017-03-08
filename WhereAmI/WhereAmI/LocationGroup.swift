@@ -7,15 +7,14 @@
 //
 
 import Foundation
-import Realm
+import RealmSwift
 
-class LocationGroup {
-    var locations: [UserLocation]
-    var groupName: String
+class LocationGroup: Object {
+    var locations: List<UserLocation> = List<UserLocation>()
+    dynamic var groupName: String = ""
     
-    init(groupName: String) {
-        self.groupName = groupName
-        locations = [UserLocation]()
+    override static func primaryKey() -> String? {
+        return "groupName"
     }
     
     func insert(location: UserLocation) -> Bool {

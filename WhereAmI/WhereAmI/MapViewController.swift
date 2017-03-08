@@ -10,28 +10,43 @@ import CoreLocation
 import Foundation
 import UIKit
 
+import Realm
+import RealmSwift
+
 class MapViewController: UIViewController {
-    var mapView: GMSMapView!
-    var circle: GMSCircle!
-    var myLocationMark: GMSMarker!
+    var mapView: GMSMapView = GMSMapView()
+    var circle: GMSCircle = GMSCircle()
+    var myLocationMark: GMSMarker = GMSMarker()
     let locationManager: CLLocationManager = CLLocationManager()
     let ad = UIApplication.shared.delegate as? AppDelegate
+    var realm: Realm!
+    var userLocation: UserLocation = UserLocation()
+    
     override func viewDidLoad() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
-        myLocationMark = GMSMarker()
+        myLocationMark.title = "myLoc"
         myLocationMark.icon = UIImage(named: "MyLocation")
-        circle = GMSCircle()
-        circle.strokeColor = UIColor(red: 0, green: 0, blue: 255, alpha: 0.09)
-        circle.fillColor = UIColor(red: 0, green: 0, blue: 255, alpha: 0.05)
-        mapView = GMSMapView()
+        circle.strokeColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 0.09)
+        circle.fillColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 0.05)
         mapView.frame = CGRect.zero
-        mapView.isMyLocationEnabled = true
+        mapView.isMyLocationEnabled = false
         mapView.isUserInteractionEnabled = false
         self.view = mapView
+        /* realm test
+        userLocation.locationName = "기모찌"
+        userLocation.latitude = 2.2
+        userLocation.longitude = 2.3
+        realm = ad?.realm
+        try! realm.write {
+            realm.add(userLocation)
+        }
+        let loadLocation = realm.objects(UserLocation.self).filter("locationName = '기모찌'")
+        print(loadLocation.first!.locationName, loadLocation.first!.latitude)
+                    */
     }
     @IBAction func setBoundary(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Set a Boundary", message: "\n\n\n\n", preferredStyle: UIAlertControllerStyle.actionSheet);
@@ -58,7 +73,13 @@ extension MapViewController: CLLocationManagerDelegate {
         guard let location = locations.last else { 
             return
         }
-        mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17.8, bearing: (ad?.supplier.compass)!, viewingAngle: 0)
+        mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: { () -> Float in
+            if(ad?.supplier.radius == 200){
+                return 16.8
+            }
+            else{
+                return 18.8
+            }}(), bearing: (ad?.supplier.compass)!, viewingAngle: 0)
         ad?.supplier.coordinate.latitude = location.coordinate.latitude
         ad?.supplier.coordinate.longitude = location.coordinate.longitude
         circle.position = location.coordinate
@@ -91,6 +112,20 @@ extension MapViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             return
         }
         ad?.supplier.radius = Double(ConstValues.boundary[row])!
+        
+        switch ad?.supplier.radius {
+        case CLLocationDis100:
+            mapView.animate(toZoom: 18.8)
+        case 200:
+            mapView.animate(toZoom: 16.8)
+        default:
+            <#code#>
+        }
+        
+        
+        else {
+            
+        }
         circle.radius = (ad?.supplier.radius)!
         circle.map = mapView
     }
