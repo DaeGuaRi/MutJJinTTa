@@ -297,6 +297,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="WhereAmI" id="zhN-2U-xm4"/>
+                    <connections>
+                        <outlet property="runningMode" destination="7hl-bo-rvs" id="R5S-K4-2RU"/>
+                        <outlet property="studyMode" destination="JAG-dj-c11" id="isT-Cl-gLP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKt-JT-zUV" sceneMemberID="firstResponder"/>
             </objects>

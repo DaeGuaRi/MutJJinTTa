@@ -112,22 +112,19 @@ extension MapViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             return
         }
         ad?.supplier.radius = Double(ConstValues.boundary[row])!
+        let radius: Double = (ad?.supplier.radius)!
+        circle.radius = radius
+        circle.map = mapView
         
-        switch ad?.supplier.radius {
-        case CLLocationDis100:
-            mapView.animate(toZoom: 18.8)
+        switch radius {
+        case 100:
+            mapView.animate(toZoom: 17.8)
         case 200:
             mapView.animate(toZoom: 16.8)
         default:
-            <#code#>
+            mapView.animate(toZoom: 18.8)
         }
         
-        
-        else {
-            
-        }
-        circle.radius = (ad?.supplier.radius)!
-        circle.map = mapView
     }
 }
 
