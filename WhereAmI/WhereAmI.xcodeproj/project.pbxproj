@@ -22,6 +22,8 @@
 		C94858941E64042F00E3D530 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94858881E64042F00E3D530 /* MapViewController.swift */; };
 		C94858951E64042F00E3D530 /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94858891E64042F00E3D530 /* UILoadingView.swift */; };
 		C964B6F21E6EA5050065E04E /* ModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964B6F11E6EA5050065E04E /* ModeSelectViewController.swift */; };
+		C9741D251E70E89B002C31C0 /* NearbyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9741D241E70E89B002C31C0 /* NearbyLocation.swift */; };
+		C9741D271E70E8BE002C31C0 /* BenchMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9741D261E70E8BE002C31C0 /* BenchMark.swift */; };
 		C9A238291E6CFB5000996F48 /* GroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A238281E6CFB5000996F48 /* GroupListViewController.swift */; };
 		C9A2382B1E6CFBDC00996F48 /* BenchMarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2382A1E6CFBDC00996F48 /* BenchMarkListViewController.swift */; };
 		C9A2382D1E6CFC3E00996F48 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2382C1E6CFC3E00996F48 /* StudyViewController.swift */; };
@@ -50,6 +52,8 @@
 		C94858881E64042F00E3D530 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C94858891E64042F00E3D530 /* UILoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILoadingView.swift; sourceTree = "<group>"; };
 		C964B6F11E6EA5050065E04E /* ModeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeSelectViewController.swift; sourceTree = "<group>"; };
+		C9741D241E70E89B002C31C0 /* NearbyLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyLocation.swift; sourceTree = "<group>"; };
+		C9741D261E70E8BE002C31C0 /* BenchMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenchMark.swift; sourceTree = "<group>"; };
 		C9A238281E6CFB5000996F48 /* GroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListViewController.swift; sourceTree = "<group>"; };
 		C9A2382A1E6CFBDC00996F48 /* BenchMarkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenchMarkListViewController.swift; sourceTree = "<group>"; };
 		C9A2382C1E6CFC3E00996F48 /* StudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				C9A2382A1E6CFBDC00996F48 /* BenchMarkListViewController.swift */,
 				C9A2382C1E6CFC3E00996F48 /* StudyViewController.swift */,
 				C964B6F11E6EA5050065E04E /* ModeSelectViewController.swift */,
+				C9741D241E70E89B002C31C0 /* NearbyLocation.swift */,
+				C9741D261E70E8BE002C31C0 /* BenchMark.swift */,
 			);
 			path = WhereAmI;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 				C948588E1E64042F00E3D530 /* Calculator.swift in Sources */,
 				C9D08A831E6516000087B1CA /* LocationGroup.swift in Sources */,
 				C94858911E64042F00E3D530 /* LoadingViewController.swift in Sources */,
+				C9741D271E70E8BE002C31C0 /* BenchMark.swift in Sources */,
+				C9741D251E70E89B002C31C0 /* NearbyLocation.swift in Sources */,
 				C94858951E64042F00E3D530 /* UILoadingView.swift in Sources */,
 				C94858921E64042F00E3D530 /* LocationSupplier.swift in Sources */,
 				C9A2382B1E6CFBDC00996F48 /* BenchMarkListViewController.swift in Sources */,

@@ -11,7 +11,8 @@ import RealmSwift
 
 class BenchMarkGroup: Object {
     dynamic var groupName: String = ""
-    //var benchMarks: Dictionary<String, [String]> = Dictionary<String, [String]>() // Key 값이 기준점
+    var benchMarks: List<BenchMark> = List<BenchMark>()
+    // Key 값이 기준점
     
     override static func primaryKey() -> String? {
         return "groupName"
